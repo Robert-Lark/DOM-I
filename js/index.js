@@ -40,3 +40,109 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+/*
+## Task 1A: Create selectors to point your data into elements
+
+* [ ] Create selectors by using any of the DOM element's methods
+*/
+//Selecting all of a specific Element
+const link = document.querySelectorAll('link');
+const div = document.querySelectorAll('div');
+const nav = document.querySelectorAll('nav');
+const img = document.querySelectorAll('img');
+const h4 = document.querySelectorAll('h4');
+const p = document.querySelectorAll('p');
+
+//Individually selecting by element
+const html = document.querySelector('html');
+const head = document.querySelector('head');
+const title = document.querySelector('title');
+const script = document.querySelector('script');
+const body = document.querySelector('body');
+const header = document.querySelector('header');
+const a = document.querySelector('a');
+const section = document.querySelector('section');
+const h1 = document.querySelector('h1');
+const button = document.querySelector('button');
+const footer = document.querySelector('footer');
+
+//Selecting by Class
+
+const containerClass = document.querySelector('.container');
+const logoClass = document.querySelector('.logo');
+const ctaClass = document.querySelector('.cta');
+const ctaTextClass = document.querySelector('.cta-text');
+const mainContentClass = document.querySelector('.main-content');
+const topContentClass = document.querySelector('.top-content');
+const textContentClass = document.querySelector('.text-content');
+const middleImgClass = document.querySelector('.middle-img');
+const bottomContentClass = document.querySelector('.bottom-content');
+const contactClass = document.querySelector('.contact');
+
+//Selecting by Parent/Child
+const imgChild = document.querySelector('header img');
+const divChild = document.querySelector('.main-content div');
+const h4Child = document.querySelector('.text-content h4');
+const pChild = document.querySelector('.text-content p');
+const bottomContentChild = document.querySelector('.bottom-content div');
+const topContentChild = document.querySelector('.top-content div');
+
+//Selecting by searching inside an Element
+const bottomContentChildDiv = bottomContentChild.querySelector('div');
+const topContentChildP = topContentChild.querySelector('p');
+
+
+// ## Task 1B: Use the IDs to update src path content
+const imgUpdate = document.querySelector('#logo-img');
+imgUpdate.src = 'img/logo.png';
+
+
+const imgUpdate1 = ctaClass.querySelector('#cta-img');
+imgUpdate1.src = 'img/header-img.png';
+
+const imgUpdate2 = document.querySelector('#middle-img');
+imgUpdate2.src = 'img/mid-page-accent.jpg';
+
+
+/*
+## Task 2: Update the HTML with the JSON data
+
+* [ ] Remember, NO direct updating of the HTML source is allowed.
+* [ ] Using your selectors, update the content to match the example file.
+*/
+//NAV-BAR
+
+
+//HEADLINE
+const domIsAwesome = ctaTextClass.querySelector('h1')
+domIsAwesome.insertAdjacentText("afterbegin", 'Awesome');
+domIsAwesome.insertAdjacentHTML("afterbegin", '<br>');
+domIsAwesome.insertAdjacentText("afterbegin", 'Is');
+domIsAwesome.insertAdjacentHTML("afterbegin", '<br>');
+domIsAwesome.insertAdjacentText("afterbegin", 'Dom');
+
+
+//BUTTON
+
+//MAIN CONTENT
+textContentClass.classList.add('1');
+const pChild = document.querySelector('.text-content1 p');
+h4Child.textContent = 'Features';
+pChild.textContent = 'Features content elementum magna eros';
+
+/*
+## Task 3: Add new content
+
+* [ ] Change the color of the navigation text to be green.
+* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [ ] Check your work by looking at the [original html](original.html) in the browser
+*/
+
+
+/*
+## Stretch Goals
+
+* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+*/
