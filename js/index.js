@@ -148,7 +148,7 @@ pAll[4].textContent = siteContent["main-content"][ "vision-content"];
 h4All[5].textContent = siteContent["main-content"]["contact-h4"];
 
 //CONTACT
-const h4Children = document.querySelector('section h4');
+const h4Children = document.querySelector('.contact h4');
 
 h4Children.textContent = siteContent.contact["contact-h4"];
 pAll[5].textContent = siteContent.contact.address;
