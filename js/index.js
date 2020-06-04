@@ -156,11 +156,19 @@ footer.textContent = siteContent.footer.copyright;
 
 //* [ ] Change the color of the navigation text to be green.
 
-const changeToGreen = document.querySelector('.some-class');
-
-someClass.style.backgroundColor = "gray";
+aAll[0].style.color = "green";
+aAll[1].style.color = "green";
+aAll[2].style.color = "green";
+aAll[3].style.color = "green";
+aAll[4].style.color = "green";
+aAll[5].style.color = "green";
 
 //* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+var aAa = document.createAttribute("my_attrib");
+aAa.value = "newVal";
+nav.setAttributeNode(aAa);
+nav.appendChild('my_attrib');
 //* [ ] Check your work by looking at the [original html](original.html) in the browser
 
 
