@@ -49,12 +49,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Selecting all of a specific Element
 const link = document.querySelectorAll('link');
 const div = document.querySelectorAll('div');
-const nav = document.querySelectorAll('nav');
+const navAll = document.querySelectorAll('nav');
 const img = document.querySelectorAll('img');
-const h4 = document.querySelectorAll('h4');
-const p = document.querySelectorAll('p');
+const h4All = document.querySelectorAll('h4');
+const pAll = document.querySelectorAll('p');
+const aAll = document.querySelectorAll('a');
 
 //Individually selecting by element
+const nav = document.querySelector('nav');
 const html = document.querySelector('html');
 const head = document.querySelector('head');
 const title = document.querySelector('title');
@@ -111,8 +113,14 @@ imgUpdate2.src = 'img/mid-page-accent.jpg';
 * [ ] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
 */
-//NAV-BAR
 
+//NAV-BAR
+aAll[0].innerText = siteContent.nav["nav-item-1"];
+aAll[1].innerText = siteContent.nav["nav-item-2"];
+aAll[2].innerText = siteContent.nav["nav-item-3"];
+aAll[3].innerText = siteContent.nav["nav-item-4"];
+aAll[4].innerText = siteContent.nav["nav-item-5"];
+aAll[5].innerText = siteContent.nav["nav-item-6"];
 
 //HEADLINE
 const domIsAwesome = ctaTextClass.querySelector('h1')
@@ -124,20 +132,37 @@ domIsAwesome.insertAdjacentText("afterbegin", 'Dom');
 
 
 //BUTTON
+button.innerText = siteContent.cta["button"];
 
 //MAIN CONTENT
-textContentClass.classList.add('1');
-const pChild = document.querySelector('.text-content1 p');
-h4Child.textContent = 'Features';
-pChild.textContent = 'Features content elementum magna eros';
+h4All[0].textContent = siteContent["main-content"]["features-h4"];
+pAll[0].textContent = siteContent["main-content"]["features-content"];
+h4All[1].textContent = siteContent["main-content"]["about-h4"];
+pAll[1].textContent = siteContent["main-content"]["about-content"];
+h4All[2].textContent = siteContent["main-content"]["services-h4"];
+pAll[2].textContent = siteContent["main-content"]["services-content"];
+h4All[3].textContent = siteContent["main-content"]["product-h4"]
+pAll[3].textContent = siteContent["main-content"]["product-content"];
+h4All[4].textContent = siteContent["main-content"]["vision-h4"]
+pAll[4].textContent = siteContent["main-content"][ "vision-content"];
+h4All[5].textContent = siteContent["main-content"]["contact-h4"];
 
-/*
-## Task 3: Add new content
+//FOOTER
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
-*/
+footer.textContent = siteContent.footer.copyright;
+
+
+//## Task 3: Add new content
+
+//* [ ] Change the color of the navigation text to be green.
+
+const changeToGreen = document.querySelector('.some-class');
+
+someClass.style.backgroundColor = "gray";
+
+//* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+//* [ ] Check your work by looking at the [original html](original.html) in the browser
+
 
 
 /*
