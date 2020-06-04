@@ -147,6 +147,14 @@ h4All[4].textContent = siteContent["main-content"]["vision-h4"]
 pAll[4].textContent = siteContent["main-content"][ "vision-content"];
 h4All[5].textContent = siteContent["main-content"]["contact-h4"];
 
+//CONTACT
+const h4Children = document.querySelector('section h4');
+
+h4Children.textContent = siteContent.contact["contact-h4"];
+pAll[5].textContent = siteContent.contact.address;
+pAll[6].textContent = siteContent.contact.phone;
+pAll[7].textContent = siteContent.contact.email;
+
 //FOOTER
 
 footer.textContent = siteContent.footer.copyright;
@@ -164,11 +172,13 @@ aAll[4].style.color = "green";
 aAll[5].style.color = "green";
 
 //* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+var newlink= document.createElement("a");
+newlink.textContent = "BOUNCE";
+nav.appendChild(newlink);
 
-var aAa = document.createAttribute("my_attrib");
-aAa.value = "newVal";
-nav.setAttributeNode(aAa);
-nav.appendChild('my_attrib');
+var newlink2= document.createElement("a");
+newlink2.textContent = "BOUNCER";
+nav.prepend(newlink2);
 //* [ ] Check your work by looking at the [original html](original.html) in the browser
 
 
@@ -177,5 +187,8 @@ nav.appendChild('my_attrib');
 ## Stretch Goals
 
 * [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
-* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 */
+const imgUpdate3 = ctaClass.querySelector('#cta-img');
+imgUpdate3.src = 'img/Screen Shot 2020-05-21 at 6.40.49 PM.png';
+
+//* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
